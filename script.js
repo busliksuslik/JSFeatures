@@ -1,5 +1,8 @@
 "use strict";
 
-const calc = () => {return 'Hello. 3,1415926' } ;
+const wait = (x) => setTimeout(function(){console.log(x);},x);
 
-console.log(calc())
+function serv(msg, lol){
+    msg.forEach(lol);
+}
+serv([100,20,10,1,5,15], wait)
