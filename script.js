@@ -1,29 +1,43 @@
 "use strict";
 
-const game = {
-    window: {
-        id: "ctx",
-        width: 100,
-        height: 100
-    },
-    port: "25565",
-    VBO: "ctx",
-    EBO: "ctx",
-    version: "alpha 0.0000000000001.01 steam greenlight edition",
-    fillColor: "FF00FF",
-    author: "Buslik",
-    method1: function(){
-        console.log("kjgdfkjghn")
-    },
-    method2: function(){
-        console.log("3982749823")
-    }
-};
+const arr = [1,2,5,8,9];
 
-const {id,width} = game.window;
+console.log(arr);
 
-game.method1()
-game.method2()
+arr.pop();
+console.log(arr);
 
-console.log(id);
-console.log(width);
+arr.push(10);
+console.log(arr);
+
+for (let i  = 0; i < arr.length; i++){
+    console.log(arr[i]);
+}
+
+for (let value of arr) {
+    console.log(value);
+}
+
+const arr2 = [1,2,5,8,9];
+
+console.log(arr2.length)
+console.log(arr2)
+
+
+arr2.forEach(function(item,i,arr2){
+    console.log(`${i}: ${item} inside ${arr2}`)
+});
+
+const str = prompt("","");
+const products = str.split(",");
+console.log(products);
+products.sort();
+console.log(products);
+
+console.log(products.join("; "));
+
+products.sort(compareNum);
+function compareNum(a,b){
+    return a-b;
+}
+console.log(products);
